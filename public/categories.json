@@ -1,0 +1,22 @@
+[
+    {
+        "id":"01",
+        "name":"Living Room",
+        "img": "https://thehome.ae/wp-content/uploads/2022/10/999X665-mia-700x466.jpg"
+    },
+    {
+        "id":"02",
+        "name":"Dining & Kitchen",
+        "img": "https://hgtvhome.sndimg.com/content/dam/images/hgtv/products/2021/12/7/RX_Wayfair_Round-White-Wood-Table.jpg.rend.hgtvcom.616.616.suffix/1638902955293.jpeg"
+    },
+    {
+        "id":"03",
+        "name":"Bedroom",
+        "img": "https://www.comfyco.com/pics3/fit/m/jm17441.jpg"
+    },
+    {
+        "id":"04",
+        "name":"Home Office",
+        "img": "https://media.designcafe.com/wp-content/uploads/2021/06/21124026/home-office-furniture-desk-chair-table.jpg"
+    }
+]

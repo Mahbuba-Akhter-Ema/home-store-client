@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="footer mt-10 mb-2 items-center p-4 bg-gray-300 text-black">
+        <footer className="footer mt-3 rounded-lg mb-2 items-center p-4 bg-gray-300 text-black">
         <div className="items-center grid-flow-col">
           <p>Copyright By Mahbuba © 2022 - All right reserved</p>
         </div> 
