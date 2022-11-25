@@ -47,7 +47,7 @@ const NavBar = () => {
                     </li>
                     <li>
                       <a
-                        href="/"
+                        href="/blog"
                         aria-label="About us"
                         title="About us"
                         class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
@@ -154,7 +154,7 @@ const NavBar = () => {
                               </li>
                               <li>
                                 <a
-                                  href="/"
+                                  href="/blog"
                                   aria-label="About us"
                                   title="About us"
                                   class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
