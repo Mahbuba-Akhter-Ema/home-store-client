@@ -3,7 +3,7 @@ import img from '../../../assets/images/welcome.gif';
 
 const GetStarted = () => {
     return (
-        <section className="bg-gray-300 text-gray-100">
+        <section className="bg-gray-200 text-gray-100">
 		<div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
 			<img src={img} alt="" className="h-80 bg-gray-500 aspect-video" />
 			<div className="flex flex-col justify-center flex-1 p-6 bg-gray-400">
