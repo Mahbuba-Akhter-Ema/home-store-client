@@ -20,9 +20,9 @@ const NavBar = () => {
                         href="/"
                         aria-label="Our product"
                         title="Our product"
-                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-400"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
                       >
-                        Product
+                        Home
                       </a>
                     </li>
                     <li>
@@ -30,9 +30,9 @@ const NavBar = () => {
                         href="/"
                         aria-label="Our product"
                         title="Our product"
-                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-400"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
                       >
-                        Features
+                        Categories
                       </a>
                     </li>
                     <li>
@@ -40,7 +40,7 @@ const NavBar = () => {
                         href="/"
                         aria-label="Product pricing"
                         title="Product pricing"
-                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-400"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
                       >
                         Pricing
                       </a>
@@ -50,9 +50,9 @@ const NavBar = () => {
                         href="/"
                         aria-label="About us"
                         title="About us"
-                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-400"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
                       >
-                        About us
+                        Blog
                       </a>
                     </li>
                   </ul>
@@ -127,9 +127,9 @@ const NavBar = () => {
                                   href="/"
                                   aria-label="Our product"
                                   title="Our product"
-                                  class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-400"
+                                  class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
                                 >
-                                  Product
+                                  Home
                                 </a>
                               </li>
                               <li>
@@ -137,9 +137,9 @@ const NavBar = () => {
                                   href="/"
                                   aria-label="Our product"
                                   title="Our product"
-                                  class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-400"
+                                  class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
                                 >
-                                  Features
+                                  Categories
                                 </a>
                               </li>
                               <li>
@@ -147,7 +147,7 @@ const NavBar = () => {
                                   href="/"
                                   aria-label="Product pricing"
                                   title="Product pricing"
-                                  class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-400"
+                                  class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
                                 >
                                   Pricing
                                 </a>
@@ -157,9 +157,9 @@ const NavBar = () => {
                                   href="/"
                                   aria-label="About us"
                                   title="About us"
-                                  class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-400"
+                                  class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
                                 >
-                                  About us
+                                  Blog
                                 </a>
                               </li>
                               <li>
