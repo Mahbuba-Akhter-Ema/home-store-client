@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../../../assets/images/';
+import logo from '../../../assets/images/home-store-logo.png';
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +12,7 @@ const NavBar = () => {
                     title="Company"
                     class="inline-flex items-center"
                   >
-                    <img src={logo} alt="" srcset="" />
+                    <img className='w-24 h-10' src={logo} alt="" srcset="" />
                   </a>
                   <ul class="flex items-center hidden space-x-8 lg:flex">
                     <li>
@@ -101,24 +101,7 @@ const NavBar = () => {
                                 title="Company"
                                 class="inline-flex items-center"
                               >
-                                <svg
-                                  class="w-8 text-deep-purple-accent-400"
-                                  viewBox="0 0 24 24"
-                                  strokeLinejoin="round"
-                                  strokeWidth="2"
-                                  strokeLinecap="round"
-                                  strokeMiterlimit="10"
-                                  stroke="currentColor"
-                                  fill="none"
-                                >
-                                  <rect x="3" y="1" width="7" height="12" />
-                                  <rect x="3" y="17" width="7" height="6" />
-                                  <rect x="14" y="1" width="7" height="6" />
-                                  <rect x="14" y="11" width="7" height="12" />
-                                </svg>
-                                <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                  Company
-                                </span>
+                                <img className='w-24 h-10' src={logo} alt="" srcset="" />
                               </a>
                             </div>
                             <div>
