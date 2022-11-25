@@ -1,12 +1,14 @@
 import React from 'react';
-import Categories from '../../Categories/Categories';
-import Carousel from './Carousel/Carousel';
+import Carousel from '../Carousel/Carousel';
+import Categories from '../Categories/Categories';
+import Gallery from '../Gallery/Gallery';
 
 const Home = () => {
     return (
         <div>
             <Carousel></Carousel>
             <Categories></Categories>
+            <Gallery></Gallery>
         </div>
     );
 };

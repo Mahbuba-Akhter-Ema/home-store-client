@@ -4,7 +4,7 @@ import logo from '../../../assets/images/home-store-logo.png';
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-              <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+              <div class="px-4 py-5 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                 <div class="relative absolute z-20  flex items-center justify-between">
                   <a
                     href="/"
@@ -56,7 +56,17 @@ const NavBar = () => {
                       </a>
                     </li>
                   </ul>
-                  <ul class="flex items-center hidden space-x-8 lg:flex">
+                  <ul class="flex items-end hidden space-x-8 lg:flex">
+                    <li>
+                      <a
+                        href="/"
+                        class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
+                        aria-label="Sign up"
+                        title="Sign up"
+                      >
+                        Login
+                      </a>
+                    </li>
                     <li>
                       <a
                         href="/"
