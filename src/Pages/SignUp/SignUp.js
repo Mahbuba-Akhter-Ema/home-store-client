@@ -1,13 +1,38 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/UseContext';
 
 const SignUp = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/"
+
+    const {createUser} = useContext(AuthContext);
+    const handleSignUp = event => {
+        event.preventDefault()
+        const form = event.target
+        const name = form.name.value
+        const email = form.email.value
+        const password = form.password.value
+        // console.log(name, email, password)
+        createUser(email, password)
+        .then(result => {
+            toast.success('Successfully Created')
+            navigate('/')
+        })
+        .catch(error => {
+            toast.error(error.message)
+        })
+    }
     return (
         <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-800 text-gray-100 mx-auto m-8">
                 <h1 className="text-2xl font-bold text-center">Sign Up</h1>
-                <htmlForm noValidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
+                <form onSubmit={handleSignUp} noValidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
                     <div className="space-y-1 text-sm">
                         <label htmlFor="username" className="block text-gray-400">Username</label>
-                        <input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" />
+                        <input type="text" name="name" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" />
                     </div>
                     <div className="space-y-1 text-sm">
                         <label htmlFor="username" className="block text-gray-400">Your Email</label>
@@ -21,7 +46,7 @@ const SignUp = () => {
                         </div>
                     </div>
                     <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-violet-400">Sign Up</button>
-                </htmlForm>
+                </form>
                 <div className="flex items-center pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
                     <p className="px-3 text-sm text-gray-400">Sign Up with social accounts</p>

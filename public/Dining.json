@@ -7,7 +7,7 @@
         "age": 3,
         "time":"10:00AM",
         "seller_name": "Gwen Wilkinson",
-        "product_name": "DiningTable",
+        "product_name": "Oyster Dinning Set",
         "phone": "+880 (854) 406-2815",
         "address": "471 Ralph Avenue, Islandia, Rhode Island, 9874"
       },
@@ -18,7 +18,7 @@
         "age": 10,
         "time":"10:30AM",
         "seller_name": "Sherry Mcleod",
-        "product_name": "Dining Table-2",
+        "product_name": "Nora Dining Set",
         "phone": "+880 (803) 476-3963",
         "address": "490 Lexington Avenue, Strong, Puerto Rico, 4159"
       },
@@ -30,7 +30,7 @@
         "time":"11:00AM",
         "verification":true,
         "seller_name": "Jordan Lucas",
-        "product_name": "Dining Table-3",
+        "product_name": "Floris Dining Set",
         "phone": "+880 (999) 506-3274",
         "address": "505 Highland Boulevard, Sattley, California, 4066"
       }

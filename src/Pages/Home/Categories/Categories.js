@@ -13,7 +13,6 @@ const Categories = () => {
              </div>
             </p>
           </div>
-         {/* ok  */}
        
         </div>
         <div className="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -25,7 +24,7 @@ const Categories = () => {
             <div className="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/1571472/pexels-photo-1571472.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                src="https://estorishomezonelive.blob.core.windows.net/thumbs/0023203_DolanteBeigeBed_8e4d9_900.jpeg"
                 alt="Person"
               />
               <div className="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">

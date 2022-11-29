@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/home-store-logo.png';
+import { AuthContext } from '../../../contexts/AuthProvider/UseContext';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user, LogOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    LogOut()
+  }
   return (
     <div className="px-4 py-5 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="relative absolute z-20  flex items-center justify-between">
@@ -58,26 +64,30 @@ const NavBar = () => {
           </li>
         </ul>
         <ul className="flex items-end hidden space-x-8 lg:flex">
-          <li>
-            <Link
-              to="/login"
-              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
-              aria-label="Sign up"
-              title="Sign up"
-            >
-              Login
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/signup"
-              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
-              aria-label="Sign up"
-              title="Sign up"
-            >
-              Sign Up
-            </Link>
-          </li>
+          {
+            user?.uid ?
+              <li>
+                <Link
+                  onClick={handleLogOut}
+                  className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
+                  aria-label="Sign up"
+                  title="Sign up"
+                >
+                  Log Out
+                </Link>
+              </li>
+              :
+              <li>
+                <Link
+                  to="/login"
+                  className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
+                  aria-label="Sign up"
+                  title="Sign up"
+                >
+                  LogIn
+                </Link>
+              </li>
+          }
         </ul>
         <div className="lg:hidden">
           <button
@@ -174,26 +184,30 @@ const NavBar = () => {
                       </a>
                     </li>
                     <li>
-                      <li>
-                        <Link
-                          to="/login"
-                          className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
-                          aria-label="Sign up"
-                          title="Sign up"
-                        >
-                          Login
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/signup"
-                          className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
-                          aria-label="Sign up"
-                          title="Sign up"
-                        >
-                          Sign Up
-                        </Link>
-                      </li>
+                      {
+                        user?.uid ?
+                          <li>
+                            <Link
+                              onClick={handleLogOut}
+                              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
+                              aria-label="Sign up"
+                              title="Sign up"
+                            >
+                              Log Out
+                            </Link>
+                          </li>
+                          :
+                          <li>
+                            <Link
+                              to="/login"
+                              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
+                              aria-label="Sign up"
+                              title="Sign up"
+                            >
+                              LogIn
+                            </Link>
+                          </li>
+                      }
                     </li>
                   </ul>
                 </nav>
