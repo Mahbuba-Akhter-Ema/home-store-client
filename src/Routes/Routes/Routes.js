@@ -1,7 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blog/Blog";
+import BedRoom from "../../Pages/Home/Home/BedRoom";
+import DiningRoom from "../../Pages/Home/Home/DiningRoom";
 import Home from "../../Pages/Home/Home/Home";
+import LivingRoom from "../../Pages/Home/Home/LivingRoom";
 import Login from "../../Pages/Login/Login";
 import ErrorPage from "../../Pages/Shared/ErrorPage/ErrorPage";
 import SignUp from "../../Pages/SignUp/SignUp";
@@ -25,8 +28,16 @@ export const router = createBrowserRouter([
                 element: <SignUp></SignUp>
             },
             {
-                path: '/blog',
-                element: <Blog></Blog>
+                path: '/Dining',
+                element: <DiningRoom></DiningRoom>
+            },
+            {
+                path: '/Bedroom',
+                element: <BedRoom></BedRoom>
+            },
+            {
+                path: '/LivingRoom',
+                element: <LivingRoom></LivingRoom>
             }
         ]
     }
