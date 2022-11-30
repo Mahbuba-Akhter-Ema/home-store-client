@@ -3,7 +3,7 @@ import { FaCheck } from "react-icons/fa";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 
-const AllProductsCard = ({ product, setModalData }) => {
+const AllProductsCard = ({ product, setModalData, setReportData }) => {
     const { purchase_Price, sell_price, picture, age, time, seller_name, product_name, phone, address, verification } = product;
     return (
         <div className='p-4'>
@@ -33,7 +33,8 @@ const AllProductsCard = ({ product, setModalData }) => {
                     <p >Phone: {phone}</p>
                     <p >Post: {time}</p>
                     <div className="card-actions justify-between">
-                        <label className='btn bg-blue-600 border-0 hover:text-red-700'>Report</label>
+                        <label onClick={() => setReportData(product)}
+                        htmlFor="Report" className='btn bg-blue-600 border-0 hover:text-red-700'>Report</label>
 
 
                         <label htmlFor="Furniture" onClick={() => setModalData(product)} className='btn bg-primary'>Book now</label>

@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 import Loader from '../../Shared/Loader/Loader';
 import AllProductsCard from './AllProductsCard';
 import BookNowModal from './BookNowModal';
+import ReportModal from './ReportModal';
 
 const BedRoom = () => {
     const [modalData, setModalData]=useState('')
+    const [reportData, setReportData]=useState('')
 
     const {data:bedRoomData=[], isLoading} = useQuery({
         queryKey: ['bedRoom'],
@@ -28,11 +30,13 @@ const BedRoom = () => {
                  key={product._id}
                 product={product}
                 setModalData={setModalData}
+                setReportData={setReportData}
                  ></AllProductsCard>)
                }
             </div>
             <div>
                 <BookNowModal modalData={modalData}></BookNowModal>
+                <ReportModal reportData={reportData}></ReportModal>
             </div>
         </div>
     );
