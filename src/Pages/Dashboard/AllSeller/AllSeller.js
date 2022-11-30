@@ -1,9 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import toast from 'react-hot-toast';
 import Loader from '../../Shared/Loader/Loader';
 
 const AllSeller = () => {
-    const {data:allSeller=[], isLoading} = useQuery({
+    const {data:allSeller=[], isLoading, refetch} = useQuery({
         queryKey: ['allSeller'],
         queryFn: async () => {
             const res = await fetch('http://localhost:5000/allSeller')
@@ -15,6 +16,21 @@ const AllSeller = () => {
     if (isLoading) {
         return <Loader></Loader>
     };
+
+    const handleDelete = dlt => {
+        const agree = window.confirm(`Are You Sure To Delete?${dlt.name}`);
+        if(agree){
+            fetch(`http://localhost:5000/sellerDelete/${dlt._id}`,{
+                method:'DELETE'
+            }
+            )
+            .then(res => res.json())
+            .then(data => {
+                toast.success('Deleted Successfully');
+                refetch()
+            })
+        }
+    }
 
     return (
         <div className='my-8'>
@@ -38,7 +54,7 @@ const AllSeller = () => {
                             <td>{sellers?.email}</td>
                             <td>
                                 
-                                <button className='btn bg-red-600 btn-sm border-0'>delete</button>
+                                <button onClick={()=>handleDelete(sellers)} className='btn bg-red-600 btn-sm border-0'>delete</button>
                                 
                             </td>
                         </tr>)
