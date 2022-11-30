@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
+import Dashboardlayout from "../../Layout/Dashboardlayout";
 import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blog/Blog";
+import Categories from "../../Pages/Home/Categories/Categories";
+import Gallery from "../../Pages/Home/Gallery/Gallery";
 import BedRoom from "../../Pages/Home/Home/BedRoom";
 import DiningRoom from "../../Pages/Home/Home/DiningRoom";
 import Home from "../../Pages/Home/Home/Home";
@@ -28,6 +31,19 @@ export const router = createBrowserRouter([
                 element: <SignUp></SignUp>
             },
             {
+                path: '/categories',
+                element: <Categories></Categories>
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
+            },
+            {
+                path: '/featured',
+                element: <Gallery></Gallery>
+            },
+            
+            {
                 path: '/Dining',
                 element: <DiningRoom></DiningRoom>
             },
@@ -39,6 +55,13 @@ export const router = createBrowserRouter([
                 path: '/LivingRoom',
                 element: <LivingRoom></LivingRoom>
             }
+        ]
+    },
+    {
+        path: '/dashboardlayout',
+        element: <Dashboardlayout></Dashboardlayout>,
+        children: [
+            
         ]
     }
 ])

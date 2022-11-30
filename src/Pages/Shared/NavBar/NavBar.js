@@ -23,44 +23,54 @@ const NavBar = () => {
         </a>
         <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
-            <a
-              href="/"
+            <Link
+              to="/"
               aria-label="Our product"
               title="Our product"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/"
+            <Link
+              to="/categories"
               aria-label="Our product"
               title="Our product"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
             >
               Categories
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/"
+            <Link
+              to="/featured"
               aria-label="Product pricing"
               title="Product pricing"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
             >
-              Pricing
-            </a>
+              Featured
+            </Link>
           </li>
           <li>
-            <a
-              href="/blog"
+            <Link
+              to="/blog"
               aria-label="About us"
               title="About us"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
             >
               Blog
-            </a>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/dashboardlayout"
+              aria-label="About us"
+              title="About us"
+              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
+            >
+              Dashboard
+            </Link>
           </li>
         </ul>
         <ul className="flex items-end hidden space-x-8 lg:flex">
@@ -144,44 +154,54 @@ const NavBar = () => {
                 <nav>
                   <ul className="space-y-4">
                     <li>
-                      <a
-                        href="/"
+                      <Link
+                        to="/"
                         aria-label="Our product"
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
                       >
                         Home
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/"
+                      <Link
+                        to="/categories"
                         aria-label="Our product"
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
                       >
                         Categories
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/"
+                      <Link
+                        to="/featured"
                         aria-label="Product pricing"
                         title="Product pricing"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
                       >
-                        Pricing
-                      </a>
+                        Featured
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="/blog"
                         aria-label="About us"
                         title="About us"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
                       >
                         Blog
-                      </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/dashboardlayout"
+                        aria-label="About us"
+                        title="About us"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
+                      >
+                        Dashboard
+                      </Link>
                     </li>
                     <li>
                       {

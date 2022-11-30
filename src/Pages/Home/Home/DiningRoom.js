@@ -1,20 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import React, { useState } from 'react';
+import Loader from '../../Shared/Loader/Loader';
 import AllProductsCard from './AllProductsCard';
 import BookNowModal from './BookNowModal';
 
 const DiningRoom = () => {
-    const [products, setProducts]=useState([])
     const [modalData, setModalData]=useState('')
-    useEffect(()=>{
-        fetch('Dining.json')
-        .then(res=> res.json())
-        .then(data=> setProducts(data))
-    },[])
+
+    const {data:dinningRoomData=[], isLoading} = useQuery({
+        queryKey:['dinningRoom'],
+        queryFn: async() => {
+            const res = await fetch('http://localhost:5000/dinningRoom')
+            const data = await res.json();
+            return data;
+        }
+    });
+    
+    if (isLoading) {
+        return <Loader></Loader>
+    };
+
     return (
         <div>
             <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                {
-                 products?.map(product=><AllProductsCard
+                 dinningRoomData?.map(product=><AllProductsCard
                  key={product._id}
                 product={product}
                 setModalData={setModalData}
