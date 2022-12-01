@@ -17,6 +17,7 @@ import LivingRoom from "../../Pages/Home/Home/LivingRoom";
 import Login from "../../Pages/Login/Login";
 import ErrorPage from "../../Pages/Shared/ErrorPage/ErrorPage";
 import SignUp from "../../Pages/SignUp/SignUp";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -51,15 +52,15 @@ export const router = createBrowserRouter([
             
             {
                 path: '/Dining',
-                element: <DiningRoom></DiningRoom>
+                element: <PrivateRoute><DiningRoom></DiningRoom></PrivateRoute>
             },
             {
                 path: '/Bedroom',
-                element: <BedRoom></BedRoom>
+                element: <PrivateRoute><BedRoom></BedRoom></PrivateRoute>
             },
             {
                 path: '/LivingRoom',
-                element: <LivingRoom></LivingRoom>
+                element: <PrivateRoute><LivingRoom></LivingRoom></PrivateRoute>
             }
         ]
     },

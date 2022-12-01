@@ -48,7 +48,7 @@ const SignUp = () => {
              name, email, select
         }
 
-        fetch('http://localhost:5000/position', {
+        fetch('https://home-store-server.vercel.app/position', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

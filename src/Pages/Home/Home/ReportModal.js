@@ -29,7 +29,7 @@ const ReportModal = ({reportData}) => {
             verification
         }
 
-        fetch('http://localhost:5000/report',{
+        fetch('https://home-store-server.vercel.app/report',{
             method:"POST",
             headers:{
                 'content-type':'application/json'

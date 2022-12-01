@@ -11,7 +11,7 @@ const NavBar = () => {
     LogOut()
   }
   return (
-    <div className="px-4 py-5 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div className="px-4 py-5 sticky top-0 z-50 bg-white sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="relative absolute z-20  flex items-center justify-between">
         <a
           href="/"
@@ -62,16 +62,18 @@ const NavBar = () => {
               Blog
             </Link>
           </li>
-          <li>
-            <Link
-              to="/dashboardlayout"
-              aria-label="About us"
-              title="About us"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
-            >
-              Dashboard
-            </Link>
-          </li>
+         {
+          user?.uid ?  <li>
+          <Link
+            to="/dashboardlayout"
+            aria-label="About us"
+            title="About us"
+            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
+          >
+            Dashboard
+          </Link>
+        </li>: ''
+         }
         </ul>
         <ul className="flex items-end hidden space-x-8 lg:flex">
           {

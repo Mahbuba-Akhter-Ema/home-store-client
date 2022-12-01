@@ -12,7 +12,7 @@ const LivingRoom = () => {
     const {data:livingRoomData=[], isLoading} = useQuery({
         queryKey: ['livingRoom'],
         queryFn: async () => {
-            const result = await fetch('http://localhost:5000/livingRoom')
+            const result = await fetch('https://home-store-server.vercel.app/livingRoom')
             const data = result.json();
             return data;
         }

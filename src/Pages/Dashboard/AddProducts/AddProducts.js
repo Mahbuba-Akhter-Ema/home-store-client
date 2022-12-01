@@ -52,7 +52,7 @@ const AddProducts = () => {
                 }
                 console.log(products);
 
-                fetch('http://localhost:5000/products', {
+                fetch('https://home-store-server.vercel.app/products', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
@@ -62,7 +62,7 @@ const AddProducts = () => {
                     .then(res => res.json())
                     .then(data => {
                         toast.success('product added successfully')
-                        // navigate('/dashboard/myProduct')
+                        navigate('/dashboardLayout/myproduct')
                         // form.reset();
                     })
                     .catch(error => {

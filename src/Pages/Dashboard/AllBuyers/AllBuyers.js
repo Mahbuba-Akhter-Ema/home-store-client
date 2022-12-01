@@ -7,7 +7,7 @@ const AllBuyers = () => {
     const {data:allBuyer=[], isLoading, refetch} = useQuery({
         queryKey:['allBuyer'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/allBuyer')
+            const res = await fetch('https://home-store-server.vercel.app/allBuyer')
             const data = await res.json()
             return data;
         }
@@ -20,7 +20,7 @@ const AllBuyers = () => {
     const handleDelete = dlt => {
         const agree = window.confirm(`Are you sure you want to delete?${dlt.name}`)
         if (agree) {
-            fetch(`http://localhost:5000/buyerDelete/${dlt._id}`, {
+            fetch(`https://home-store-server.vercel.app/buyerDelete/${dlt._id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())

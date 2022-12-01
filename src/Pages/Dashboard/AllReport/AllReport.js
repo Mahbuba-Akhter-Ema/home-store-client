@@ -7,7 +7,7 @@ const AllReport = () => {
     const {data:allReport=[], isLoading, refetch} = useQuery({
         queryKey: [''],
         queryFn: async () => {
-            const result = await fetch('http://localhost:5000/allReport')
+            const result = await fetch('https://home-store-server.vercel.app/allReport')
             const data = result.json();
             return data;
         }
@@ -19,7 +19,7 @@ const AllReport = () => {
     const handleDelete = dlt => {
         const agree = window.confirm(`Are you sure you want to delete?${dlt.product_name}`)
         if (agree) {
-            fetch(`http://localhost:5000/allReport/${dlt._id}`, {
+            fetch(`https://home-store-server.vercel.app/allReport/${dlt._id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())
