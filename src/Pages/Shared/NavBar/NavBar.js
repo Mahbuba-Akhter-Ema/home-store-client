@@ -62,18 +62,18 @@ const NavBar = () => {
               Blog
             </Link>
           </li>
-         {
-          user?.uid ?  <li>
-          <Link
-            to="/dashboardlayout"
-            aria-label="About us"
-            title="About us"
-            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
-          >
-            Dashboard
-          </Link>
-        </li>: ''
-         }
+          {
+            user?.uid ? <li>
+              <Link
+                to="/dashboardlayout"
+                aria-label="About us"
+                title="About us"
+                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
+              >
+                Dashboard
+              </Link>
+            </li> : ''
+          }
         </ul>
         <ul className="flex items-end hidden space-x-8 lg:flex">
           {
@@ -195,16 +195,18 @@ const NavBar = () => {
                         Blog
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        to="/dashboardlayout"
-                        aria-label="About us"
-                        title="About us"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
-                      >
-                        Dashboard
-                      </Link>
-                    </li>
+                    {
+                      user?.uid ? <li>
+                        <Link
+                          to="/dashboardlayout"
+                          aria-label="About us"
+                          title="About us"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-600"
+                        >
+                          Dashboard
+                        </Link>
+                      </li> : ''
+                    }
                     <li>
                       {
                         user?.uid ?
